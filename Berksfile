@@ -2,4 +2,4 @@ site :opscode
 
 metadata
 
-cookbook 'pypy', git: 'git@github.com:cschwartz/pypy-chef-cookbook.git'
+cookbook 'pypy', git: 'github.com/pypy-chef-cookbook.git'
