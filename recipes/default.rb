@@ -43,7 +43,7 @@ end
 file "/home/simpy/.ssh/deploy_key" do
   mode 00600
   owner "simpy"
-  if Dir["/vagrant"]
+  if File.exists?("/vagrant") && File.directory?("/vagrant")
     content File.read("/vagrant/deploy_key")
   else
     content File.read("/tmp/deploy_key")
