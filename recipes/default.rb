@@ -7,9 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
-simpy_user = default.simpy.user
+simpy_user = node["simpy"]["user"]
 simpy_home = File.join("/", "home", simpy_user)
-simpy_virtualenv = File.join(simpy_home, default.simpy.env)
+simpy_virtualenv = File.join(simpy_home, node["simpy"]["virtualenv"])
 simpy_ssh_directory = File.join(simpy_home, ".ssh")
 simpy_deploy_key = File.join(simpy_ssh_directory, "deploy_key")
 vagrant_directory = File.join("/", "vagrant")
