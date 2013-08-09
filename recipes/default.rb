@@ -7,12 +7,13 @@
 # All rights reserved - Do Not Redistribute
 #
 
-simpy_user = "simpy"
+simpy_user = default.simpy.user
 simpy_home = File.join("/", "home", simpy_user)
-simpy_virtualenv = File.join(simpy_home, "simpy-env")
+simpy_virtualenv = File.join(simpy_home, default.simpy.env)
 simpy_ssh_directory = File.join(simpy_home, ".ssh")
 simpy_deploy_key = File.join(simpy_ssh_directory, "deploy_key")
-vagrant_deploy_key_location = File.join("/", "vagrant", "deploy_key")
+vagrant_directory = File.join("/", "vagrant")
+vagrant_deploy_key_location = File.join(vagrant_directory, "deploy_key")
 metal_deploy_key_location = File.join("/", "tmp", "deploy_key")
 simpy_ssh_wrapper = File.join(simpy_home, "deploy_ssh")
 simpy_project_directory = File.join(simpy_home, "ggsn-models")
